@@ -1,4 +1,4 @@
-#GIS 5578 Week 7: Object Orientated Programming
+# GIS 5578 Week 7: Object Orientated Programming
 
 ### Purpose
 The purpose of this lab to understand the intricacies of object orientated programming
