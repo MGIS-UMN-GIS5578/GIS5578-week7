@@ -8,24 +8,51 @@ Created updated Thu Oct 22 2018
 class Point(object):
     
     def __init__(self,x,y):
-        self.x = x
-        self.y = y
+        for c, i in enumerate([x,y]):
+            flag = self.CheckValues(i)
+            if flag:
+                if c == 0: self.x = x
+                if c == 1: self.y = y
+            else:
+                print("Error not a valid point")
+                self.__del__()   
+                
 
-    def __str__():
+    def __del__(self):
+        pass
+        #if self.name: del self.name
+        
+    
+    def __str__(self):
         """ 
         This returns the string representation of the point
         """
-        self.PrintXYLocation()
+        return "X:%s , Y:%s" % (self.x, self.y)
         
-    
+    def CheckValues(self, theValue):
+        """
+        This method determines if the value is a valid floating point number
+        """
+        if str(theValue).isdigit(): 
+            return 1
+        else:
+            print("invalid value")
+            return 0
+        
     def SetName(self,theName):
         """
         This function sets the name of the point
         """
         self.name = theName
     
-    def ChangeXValue(self, x):
-        self.x = x
+    def ChangeValue(self, x=None, y=None):
+        if x and self.CheckValues(x):
+            self.x = x
+        elif y:
+            self.y = y
+        else:
+            pass
+        
         self.PrintXYLocation()
     
     def PrintXYLocation(self):
@@ -55,17 +82,16 @@ class Line(object):
         self.length = ((X2-X1)**2 + (Y2-Y1)**2)**.5
         return self.length
 
-
 class Polygon(object):
     
     def __init__(self, *args):
         
         
-        self.linesegements = args
-        
-        self.line1 = line1
-        self.line2 = line2
-        self.line3 = line3
+        self.linesegments = args
+        self.line1, self.line2, self.line3, = self.linesegments
+#        self.line1 = line1
+#        self.line2 = line2
+#        self.line3 = line3
         
     
     def CalculatePerimeter(self,):
