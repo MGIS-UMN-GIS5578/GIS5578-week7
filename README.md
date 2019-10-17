@@ -1,4 +1,4 @@
-#GIS 5578 Week 7: Object Orientated Programming
+# GIS 5578 Week 7: Object Orientated Programming
 
 ### Purpose
 The purpose of this lab to understand the intricacies of object orientated programming
@@ -72,4 +72,4 @@ Please
 1. What are all the functions of the class?
 1. Which functions require external/user input? What are the benefits/drawbacks of having specific functions that handle external input?
 1. Modify the function getRowStats so that it repeats until you enter in a valid row
-1. Why do we return self.arrayStatistics(theArray) and what is it returning?
+1. Examine the function ```python def arrayStatistics(self,theArray) ``` what is it returning?
