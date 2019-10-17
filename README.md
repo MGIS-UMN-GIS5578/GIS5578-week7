@@ -39,7 +39,6 @@ class DataRaster(Raster):
 ```    
 
 ### Questions
-Please 
 1. What are the basic elements necessary for defining a class? Write it.
 1. Describe in your own words what a class is?
 1. What is the proper way to call a method (class-function)? From within the class definition. Also explain why.
